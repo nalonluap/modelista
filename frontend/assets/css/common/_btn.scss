@@ -1,0 +1,37 @@
+.btn {
+  background-color: rgba(19, 19, 19, 0.9);
+  border-color: #131313;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 12px;
+  padding-top: 2px;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.02);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: solid 2px;
+  font-family: Sofia-Pro, sans-serif;
+  font-weight: 600;
+  transition: box-shadow .2s ease, transform .2s ease;
+  padding: 8px 16px;
+  height: 40px;
+  box-sizing: border-box;
+  border-color: #5a5a5a;
+
+  &:hover {
+    transform: translate(0, -1px);
+  }
+
+  &.light-btn {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-color: #ffffff;
+    color: #222222;
+  }
+
+  &.border-btn {
+    border-color: #222222;
+    background: transparent;
+    color: #222222;
+  }
+}

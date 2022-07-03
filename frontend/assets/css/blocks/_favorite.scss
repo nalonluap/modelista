@@ -1,0 +1,16 @@
+.favorite {
+
+  &__title {
+    font-size: 28px;
+    padding-top: 32px;
+    font-weight: lighter;
+  }
+
+  &__row {
+    margin: 0 -8px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+}

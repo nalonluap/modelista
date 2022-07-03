@@ -1,0 +1,230 @@
+.gallery {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(34,34,34,.97);
+  color: #fff;
+  display: flex;
+  overflow-y: auto;
+  // display: none;
+
+  transform: translateY(-120%);
+
+  &._transition {
+    transition: transform .5s ease;
+  }
+
+  &._open {
+    transform: translateY(0) !important;
+  }
+
+
+  &__close {
+    position: fixed;
+    top: 32px;
+    left: 32px;
+    color: #fff;
+    opacity: .7;
+    transition: opacity .25s ease-out;
+    height: 32px;
+    width: 32px;
+    z-index: 1000;
+
+    @media (max-width: $tablet-width - 1) {
+      left: 16px;
+      top: 16px;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+
+  &__content {
+    display: flex;
+    width: 66%;
+    flex-direction: column;
+    padding-top: 32px;
+
+    @media (max-width: $tablet-width - 1) {
+      padding-left: 16px;
+      padding-right: 16px;
+      width: 100%;
+      min-height: 700px;
+    }
+
+    &-wrap {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      flex-grow: 1;
+      min-height: 100%;
+
+      @media (max-width: $tablet-width - 1) {
+        display: block;
+        flex-direction: column;
+      }
+
+    }
+
+
+    .gallery-container {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      -ms-user-select: none;
+      -moz-user-select: none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
+
+      .gallery-image {
+        position: relative;
+        flex-grow: 1;
+
+        .gallery-control {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 50%;
+          display: flex;
+          opacity: .5;
+          align-items: center;
+          z-index: 1;
+          display: none;
+
+          &._active {
+            display: flex;
+            cursor: pointer;
+          }
+
+          &._left {
+            left: 0;
+            .ico {
+              transform: rotate(180deg);
+            }
+          }
+          &._right {
+            right: 0;
+            justify-content: flex-end;
+          }
+          .ico {
+            height: 32px;
+            width: 32px;
+            color: #f7eae4;
+          }
+        }
+
+        .gallery-preview {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            max-height: 100%;
+            width: auto;
+            max-width: 100%;
+          }
+        }
+
+      }
+
+      .gallery-progress {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+        font-weight: 600;
+        height: 64px;
+        letter-spacing: .9px;
+        opacity: .5;
+      }
+
+    }
+
+    .gallery-footer {
+      display: flex;
+      border-top: 2px solid rgba(247,234,228,.1);
+      padding: 28px 0;
+
+      .gallery-info {
+        display: flex;
+        flex-direction: column;
+
+        &__name {
+          margin: 0;
+          margin-bottom: 10px;
+          font-size: 22px;
+          font-weight: lighter;
+
+          a {
+            color: #fff;
+          }
+        }
+        &__text {
+          color: rgba(255,255,255,.35);
+          display: block;
+          font-size: 13px;
+        }
+      }
+
+    }
+
+
+    &-right {
+      width: 17%;
+      padding-left: 32px;
+      padding-top: 32px;
+
+      @media (max-width: $tablet-width - 1) {
+        padding-top: 0;
+        padding-left: 16px;
+        padding-right: 16px;
+        width: 100%;
+      }
+
+      h3 {
+        margin: 0;
+        margin-bottom: 32px;
+        font-size: 22px;
+        font-weight: lighter;
+        opacity: .8;
+      }
+
+
+      .gallery-stats {
+
+        .gallery-stat-item {
+
+          h4 {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 700;
+            height: 15px;
+            margin-bottom: 4px;
+            opacity: .7;
+          }
+          span {
+            display: block;
+            font-size: 14px;
+            height: 17px;
+            margin-bottom: 10px;
+            opacity: .35;
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+}

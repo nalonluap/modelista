@@ -1,0 +1,142 @@
+.small-item {
+  width: calc(25% - 16px);
+  margin: 0 8px;
+  margin-bottom: 32px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 10px 10px 0 rgba(242, 200, 180, 0.25);
+
+  @media (max-width: 1100px) {
+    width: calc(50% - 16px);
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    width: calc(100% - 16px);
+  }
+
+  &__images {
+    position: relative;
+  }
+  &__slider {
+    position: relative;
+    height: 100%;
+
+    &-arrow, .slick-arrow {
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      bottom: 0;
+      width: 64px;
+      cursor: pointer;
+      opacity: .5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      background: transparent;
+      transition: opacity .2s ease;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      svg {
+        width: 29px;
+        height: 38px;
+        color: #333;
+      }
+
+      &._left, &.slick-prev {
+        left: 0;
+
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+      &._right, &.slick-next {
+        right: 0;
+      }
+    }
+
+  }
+  &__photo {
+    height: 280px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div {
+      height: 100%;
+      width: 100%;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    padding: 16px;
+
+    .main-details {
+      display: inline-flex;
+      flex-flow: column;
+      flex-grow: 1;
+      max-width: 100%;
+
+      @media (max-width: $tablet-width - 1) {
+        margin-top: 0;
+        max-width: calc(100% - 68px);
+      }
+
+      &__top {
+        display: flex;
+        font-size: 24px;
+        height: 24px;
+        line-height: 24px;
+        align-items: center;
+
+        .name {
+          flex-shrink: 1;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          color: #222222;
+        }
+
+        .favorite {
+          margin-left: 8px;
+          position: relative;
+          width: 21px;
+          height: 18px;
+        }
+      }
+
+      &__location {
+        margin-top: 4px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 14px;
+        height: 14px;
+        line-height: 14px;
+        color: #afaba9;
+      }
+
+    }
+
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 16px;
+
+    .btn {
+      width: calc(50% - 8px);
+    }
+  }
+
+}

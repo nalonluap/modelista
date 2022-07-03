@@ -1,0 +1,49 @@
+.social {
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        color: #fff;
+        @include breakpoint($tablet-width) {
+            // width: 100px;
+            margin: 0 auto;
+        }
+        @include breakpoint($desktop-width) {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: transform .3s, opacity .3s;
+        padding: 0 10px;
+        @include breakpoint($tablet-width) {
+            font-size: 1.3rem;
+            line-height: 1.6rem;
+        }
+
+        svg {
+          max-width: 2rem;
+          max-height: 2rem;
+          color: #fff;
+        }
+
+        &:hover {
+          transform: translateY(-0.2rem);
+        }
+
+    }
+
+    &__separator {
+        transform: translateY(-3px);
+    }
+
+
+}

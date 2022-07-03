@@ -1,0 +1,90 @@
+.auth {
+
+  &__page {
+    max-width: 550px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    margin: auto;
+    padding: 16px;
+
+    &-actions {
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .forgot-pass {
+        color: rgba(19, 19, 19, 0.5);
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    max-width: 150px;
+    height: 45px;
+  }
+
+  .select-type {
+
+    &__labels {
+      #registerform-type {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: 0 -5px;
+
+        @media (max-width: 430px) {
+          flex-direction: column;
+        }
+      }
+    }
+
+    &__label {
+      flex-grow: 1;
+      background-color: #f7eae4;
+      border: 2px solid rgba(34,34,34,.05);
+      box-shadow: 0 10px 15px 0 rgba(236, 214, 204, 0.05%);
+      box-sizing: border-box;
+      padding: 16px;
+      position: relative;
+      margin: 0 5px;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transition: opacity .2s ease;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      .ico {
+        width: 64px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        border: 2px solid #fff;
+        border-radius: 100%;
+        font-size: 24px;
+      }
+
+      .subtitle {
+        font-weight: lighter;
+        font-size: 15px;
+        margin-top: 16px;
+      }
+
+      input {
+        display: none;
+      }
+    }
+  }
+
+}

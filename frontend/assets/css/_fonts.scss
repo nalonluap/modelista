@@ -1,0 +1,20 @@
+/*
+    Пример подключения шрифта woff/woff2
+    https://css-tricks.com/snippets/css/using-font-face/
+
+    @include fontFace('ProximaNova', '../fonts/ProximaNova-Regular/ProximaNova-Regular');
+*/
+
+// EuclidCircularA
+@include fontFace("EuclidCircularA", "../fonts/EuclidCircularA/EuclidCircularA-Light", normal, 300);
+@include fontFace("EuclidCircularA", "../fonts/EuclidCircularA/EuclidCircularA-Regular");
+@include fontFace("EuclidCircularA", "../fonts/EuclidCircularA/EuclidCircularA-Medium", normal, 500);
+@include fontFace("EuclidCircularA", "../fonts/EuclidCircularA/EuclidCircularA-SemiBold", normal, 600);
+@include fontFace("EuclidCircularA", "../fonts/EuclidCircularA/EuclidCircularA-Bold", normal, 700);
+
+// Affect
+@include fontFace("Affect", "../fonts/Affect/Affect");
+@include fontFace("Affect", "../fonts/Affect/Affect-Bold", normal, 700);
+
+// Roboto
+@include fontFace("Roboto", "../fonts/Roboto/Roboto");
